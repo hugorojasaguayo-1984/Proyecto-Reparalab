@@ -1,4 +1,5 @@
 import os
+import time
 import re
 import json
 import requests
@@ -14,7 +15,7 @@ def armar_peticion(pregunta_usuario: str, system_instruction: str = None, respon
         raise ValueError("La pregunta no puede estar vacía")
 
     api_key = os.getenv("GEMINI_API_KEY")
-    modelo = "gemini-3.8-flash"
+    modelo = "gemini-3.5-flash"
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
 
     headers = {
@@ -49,16 +50,22 @@ def armar_peticion(pregunta_usuario: str, system_instruction: str = None, respon
 
 
 def enviar_peticion(url: str, headers: dict, body: dict) -> dict:
-    """Envía la petición HTTP POST a Gemini."""
-    try:
-        respuesta = requests.post(url, headers=headers, json=body)
-    except requests.exceptions.ConnectionError:
-        raise RuntimeError("No se pudo conectar con el servicio. Intenta de nuevo en unos segundos.")
-
-    try:
-        return respuesta.json()
-    except requests.exceptions.JSONDecodeError:
-        raise RuntimeError("La respuesta del servicio no llegó en el formato esperado.")
+    """Envía la petición HTTP POST a Gemini con reintento ante alta demanda temporal."""
+    for intento in range(3):
+        try:
+            respuesta = requests.post(url, headers=headers, json=body)
+            datos = respuesta.json()
+            if datos.get("error", {}).get("code") == 503:
+                time.sleep(2)
+                continue
+            return datos
+        except requests.exceptions.ConnectionError:
+            if intento == 2:
+                raise RuntimeError("No se pudo conectar con el servicio. Intenta de nuevo en unos segundos.")
+            time.sleep(2)
+        except requests.exceptions.JSONDecodeError:
+            raise RuntimeError("La respuesta del servicio no llegó en el formato esperado.")
+    return datos
 
 
 def extraer_texto(datos: dict) -> str:
@@ -66,6 +73,8 @@ def extraer_texto(datos: dict) -> str:
     try:
         return datos["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError):
+        if "error" in datos:
+            raise RuntimeError(f"Google devolvió: {datos['error'].get('message', 'Error desconocido')}")
         raise RuntimeError("La respuesta no trae el texto generado en el lugar esperado.")
 
 
@@ -103,7 +112,7 @@ if __name__ == "__main__":
     }
 
     try:
-        url, headers, body = armar_peticion(pregunta_usuario, system_instruction, response_schema)
+        url, headers, body = armar_peticion(pregunta_usuario, system_instruction)
         respuesta_json = enviar_peticion(url, headers, body)
         texto = extraer_texto(respuesta_json)
         datos = parsear_respuesta_json(texto)
