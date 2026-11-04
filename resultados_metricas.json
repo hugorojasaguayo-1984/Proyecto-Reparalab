@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Cuál es la capital de Chile?",
+    "referencia": "La capital de Chile es Santiago.",
+    "respuesta_modelo": "La capital de Chile es **Santiago** (oficialmente llamada Santiago de Chile).",
+    "metricas": {
+      "tokens_referencia": 6,
+      "tokens_respuesta": 11,
+      "coincidencias": 6,
+      "precision": 0.5455,
+      "cobertura": 1.0,
+      "f1": 0.7059
+    }
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cuál es la capital de Argentina?",
+    "referencia": "La capital de Argentina es Buenos Aires.",
+    "respuesta_modelo": "La capital de Argentina es **Buenos Aires**.",
+    "metricas": {
+      "tokens_referencia": 7,
+      "tokens_respuesta": 7,
+      "coincidencias": 7,
+      "precision": 1.0,
+      "cobertura": 1.0,
+      "f1": 1.0
+    }
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Cuál es la capital de Perú?",
+    "referencia": "La capital de Perú es Lima.",
+    "respuesta_modelo": "La capital de Perú es **Lima**.",
+    "metricas": {
+      "tokens_referencia": 6,
+      "tokens_respuesta": 6,
+      "coincidencias": 6,
+      "precision": 1.0,
+      "cobertura": 1.0,
+      "f1": 1.0
+    }
+  },
+  {
+    "id": 4,
+    "pregunta": "¿En qué continente está Francia?",
+    "referencia": "Francia se encuentra en el continente europeo.",
+    "respuesta_modelo": "Francia está en el continente **europeo** (Europa), específicamente en Europa Occidental.\n\n*(Nota: Aunque su territorio principal está en Europa, Francia también cuenta con departamentos y territorios de ultramar ubicados en otros continentes, como América, África y Oceanía).*",
+    "metricas": {
+      "tokens_referencia": 7,
+      "tokens_respuesta": 37,
+      "coincidencias": 5,
+      "precision": 0.1351,
+      "cobertura": 0.7143,
+      "f1": 0.2273
+    }
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Qué idioma oficial se habla en Brasil?",
+    "referencia": "El idioma oficial de Brasil es el portugués.",
+    "respuesta_modelo": "El idioma oficial que se habla en Brasil es el **portugués**. \n\nDe hecho, Brasil es el único país de habla portuguesa en toda América.",
+    "metricas": {
+      "tokens_referencia": 8,
+      "tokens_respuesta": 24,
+      "coincidencias": 8,
+      "precision": 0.3333,
+      "cobertura": 1.0,
+      "f1": 0.5
+    }
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Quién escribió Don Quijote de la Mancha?",
+    "referencia": "Don Quijote fue escrito por Miguel de Cervantes.",
+    "respuesta_modelo": "*Don Quijote de la Mancha* fue escrito por **Miguel de Cervantes Saavedra**. \n\nEs considerada la obra cumbre de la literatura en español y una de las más importantes de la literatura universal. La primera parte se publicó en 1605 y la segunda en 1615.",
+    "metricas": {
+      "tokens_referencia": 8,
+      "tokens_respuesta": 44,
+      "coincidencias": 8,
+      "precision": 0.1818,
+      "cobertura": 1.0,
+      "f1": 0.3077
+    }
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Cuál es el río más largo del mundo?",
+    "referencia": "El río Amazonas es el más largo del mundo.",
+    "respuesta_modelo": "El río más largo del mundo es el **río Amazonas**.\n\nDurante mucho tiempo existió un debate entre el Amazonas y el río Nilo, pero estudios satelitales y mediciones recientes (realizadas por investigadores internacionales, científicos brasileños y peruanos) confirmaron que el Amazonas es el de mayor longitud.\n\nAquí tienes los datos comparativos:\n\n1. **Río Amazonas:** Aproximadamente **6.992 kilómetros** de largo (nace en los Andes peruanos y desemboca en el océano Atlántico).\n2. **Río Nilo:** Aproximadamente **6.650 kilómetros** de largo.\n\nAdemás de ser el más largo, el Amazonas es también, con mucha diferencia, el río **más caudaloso del mundo** (el que transporta más agua).",
+    "metricas": {
+      "tokens_referencia": 9,
+      "tokens_respuesta": 102,
+      "coincidencias": 9,
+      "precision": 0.0882,
+      "cobertura": 1.0,
+      "f1": 0.1622
+    }
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Cuál es el planeta más cercano al Sol?",
+    "referencia": "Mercurio es el planeta más cercano al Sol.",
+    "respuesta_modelo": "El planeta más cercano al Sol es **Mercurio**.",
+    "metricas": {
+      "tokens_referencia": 8,
+      "tokens_respuesta": 8,
+      "coincidencias": 8,
+      "precision": 1.0,
+      "cobertura": 1.0,
+      "f1": 1.0
+    }
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Qué gas respiramos principalmente para sobrevivir?",
+    "referencia": "Los seres humanos respiramos oxígeno para vivir.",
+    "respuesta_modelo": "Error en consulta: El servicio no respondió tras varios intentos. Intenta más tarde.",
+    "metricas": {
+      "tokens_referencia": 7,
+      "tokens_respuesta": 13,
+      "coincidencias": 0,
+      "precision": 0.0,
+      "cobertura": 0.0,
+      "f1": 0.0
+    }
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Cuántos días tiene un año bisiesto?",
+    "referencia": "Un año bisiesto tiene 366 días en total.",
+    "respuesta_modelo": "Error en consulta: El servicio no respondió tras varios intentos. Intenta más tarde.",
+    "metricas": {
+      "tokens_referencia": 8,
+      "tokens_respuesta": 13,
+      "coincidencias": 1,
+      "precision": 0.0769,
+      "cobertura": 0.125,
+      "f1": 0.0952
+    }
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Cuál es el océano más grande del planeta?",
+    "referencia": "El océano Pacífico es el más extenso del planeta.",
+    "respuesta_modelo": "El océano más grande del planeta es el **océano Pacífico**. \n\nOcupa más de 165 millones de kilómetros cuadrados, lo que representa aproximadamente el 30% de la superficie total de la",
+    "metricas": {
+      "tokens_referencia": 9,
+      "tokens_respuesta": 30,
+      "coincidencias": 8,
+      "precision": 0.2667,
+      "cobertura": 0.8889,
+      "f1": 0.4103
+    }
+  },
+  {
+    "id": 12,
+    "pregunta": "¿En qué país se encuentran las pirámides de Giza?",
+    "referencia": "Las pirámides de Giza se encuentran en Egipto.",
+    "respuesta_modelo": "Las pirámides de Giza se encuentran en **Egipto**, en las afueras de su capital, El Cairo.",
+    "metricas": {
+      "tokens_referencia": 8,
+      "tokens_respuesta": 16,
+      "coincidencias": 8,
+      "precision": 0.5,
+      "cobertura": 1.0,
+      "f1": 0.6667
+    }
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Cuál es el metal más liviano de la tabla periódica?",
+    "referencia": "El litio es el metal más liviano que existe.",
+    "respuesta_modelo": "El metal más liviano de la tabla periódica es el **litio** (símbolo químico: **Li**).\n\nAquí tienes algunos datos clave sobre él:\n\n* **Número atómico:** 3 (es el tercer elemento de la tabla periódica, después del hidrógeno y el helio, que son gases).\n* **Densidad:** Es extremadamente baja, de aproximadamente **0.534 g/cm³**. Esto significa que es casi la mitad de denso que el agua, por lo que **puede flotar en ella** (aunque reacciona rápidamente con el agua).\n* **Estado:** Es el elemento sólido menos denso a temperatura ambiente. \n* **Grupo:** Pertenece al grupo de los metales alcalinos.",
+    "metricas": {
+      "tokens_referencia": 9,
+      "tokens_respuesta": 92,
+      "coincidencias": 8,
+      "precision": 0.087,
+      "cobertura": 0.8889,
+      "f1": 0.1584
+    }
+  },
+  {
+    "id": 14,
+    "pregunta": "¿Cuál es el símbolo químico del agua?",
+    "referencia": "El símbolo químico de la molécula del agua es H2O.",
+    "respuesta_modelo": "El símbolo (o fórmula química) del agua es **H₂O**. \n\nEsto significa que cada molécula de agua está formada por dos átomos de hidrógeno (H) y uno de oxígeno (O).",
+    "metricas": {
+      "tokens_referencia": 10,
+      "tokens_respuesta": 29,
+      "coincidencias": 7,
+      "precision": 0.2414,
+      "cobertura": 0.7,
+      "f1": 0.359
+    }
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Quién pintó la Mona Lisa?",
+    "referencia": "La Mona Lisa fue pintada por Leonardo da Vinci.",
+    "respuesta_modelo": "Error en consulta: El servicio no respondió tras varios intentos. Intenta más tarde.",
+    "metricas": {
+      "tokens_referencia": 9,
+      "tokens_respuesta": 13,
+      "coincidencias": 0,
+      "precision": 0.0,
+      "cobertura": 0.0,
+      "f1": 0.0
+    }
+  },
+  {
+    "id": 16,
+    "pregunta": "¿Cuál es la moneda oficial de Japón?",
+    "referencia": "La moneda oficial de Japón es el yen.",
+    "respuesta_modelo": "Error en consulta: El servicio no respondió tras varios intentos. Intenta más tarde.",
+    "metricas": {
+      "tokens_referencia": 8,
+      "tokens_respuesta": 13,
+      "coincidencias": 1,
+      "precision": 0.0769,
+      "cobertura": 0.125,
+      "f1": 0.0952
+    }
+  },
+  {
+    "id": 17,
+    "pregunta": "¿Qué instrumento musical tiene 88 teclas?",
+    "referencia": "El piano estándar cuenta con un total de 88 teclas.",
+    "respuesta_modelo": "El instrumento musical que tiene 88 teclas es el **piano** (tanto el piano de cola como el piano vertical estándar). \n\nEstas 88 teclas se dividen en:\n* **52 teclas blancas** (notas naturales).\n* **36 teclas negras** (alteraciones: sostenidos y bemoles).",
+    "metricas": {
+      "tokens_referencia": 10,
+      "tokens_respuesta": 38,
+      "coincidencias": 6,
+      "precision": 0.1579,
+      "cobertura": 0.6,
+      "f1": 0.25
+    }
+  },
+  {
+    "id": 18,
+    "pregunta": "¿Cuál es el hueso más largo del cuerpo humano?",
+    "referencia": "El fémur es el hueso más largo del cuerpo humano.",
+    "respuesta_modelo": "El hueso más largo del cuerpo humano es el **fémur**. \n\nEstá ubicado en el muslo (se extiende desde la cadera hasta la rodilla) y, además de ser el más largo, es también el hueso más fuerte y pesado del cuerpo humano.",
+    "metricas": {
+      "tokens_referencia": 10,
+      "tokens_respuesta": 41,
+      "coincidencias": 10,
+      "precision": 0.2439,
+      "cobertura": 1.0,
+      "f1": 0.3922
+    }
+  },
+  {
+    "id": 19,
+    "pregunta": "¿Cuál es el país más grande del mundo por superficie?",
+    "referencia": "Rusia es el país más grande del mundo por territorio.",
+    "respuesta_modelo": "El país más grande del mundo por superficie es **Rusia**. \n\nAbarca más de **17,1 millones de kilómetros cuadrados** (aproximadamente el 11% de la superficie terrestre de la Tierra) y se extiende a lo largo de dos continentes: Europa y Asia.",
+    "metricas": {
+      "tokens_referencia": 10,
+      "tokens_respuesta": 40,
+      "coincidencias": 9,
+      "precision": 0.225,
+      "cobertura": 0.9,
+      "f1": 0.36
+    }
+  },
+  {
+    "id": 20,
+    "pregunta": "¿A qué temperatura hierve el agua a nivel del mar?",
+    "referencia": "El agua hierve a 100 grados Celsius a nivel del mar.",
+    "respuesta_modelo": "A nivel del mar, el agua hierve a **100 °C** (grados Celsius), lo que equivale a **212 °F** (grados Fahrenheit) o **373.15 K** (Kelvin).\n\nEsto ocurre bajo la presión atmosférica estándar de 1 atmósfera (1013.25 hPa). A mayor altitud (donde la presión es menor), el agua hierve a una temperatura más baja.",
+    "metricas": {
+      "tokens_referencia": 11,
+      "tokens_respuesta": 52,
+      "coincidencias": 11,
+      "precision": 0.2115,
+      "cobertura": 1.0,
+      "f1": 0.3492
+    }
+  }
+]
