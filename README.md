@@ -1,21 +1,34 @@
-# ReparaLab SpA — Miniaplicación de Integración con IA Generativa
+# Miniaplicación de Consumo de APIs de IA Generativa
 
-Miniaplicación de clasificación y procesamiento de solicitudes emocionales para el **Laboratorio de Reparación Emocional e Innovación (ReparaLab SpA)**, desarrollada en el marco del programa de Especialización en Desarrollo con IA Generativa (Accenture / Skillnest).
+Proyecto desarrollado en el marco de la **Especialización en Desarrollo con IA Generativa (Accenture / Skillnest)**.
 
-## Arquitectura y Decisiones Técnicas
+Esta miniaplicación implementa un cliente modular para interactuar con modelos de lenguaje a través de la API de Google Gemini, incorporando gestión segura de credenciales, arquitectura documentada, banco de prompts con validación de consistencia y pruebas automatizadas.
 
-- **Diagrama de Arquitectura**: Documentado y disponible en [`docs/diagrama_arquitectura.png`](docs/diagrama_arquitectura.png).
-- **Decisión de Modelo**: Análisis comparativo de costo, latencia y escalabilidad disponible en [`docs/decision-arquitectura.md`](docs/decision-arquitectura.md).
-- **Banco de Prompts y Consistencia**: Banco de prompts estructurados en [`prompts/banco.py`](prompts/banco.py) y evidencia de consistencia registrada en [`prompts/registro_resultados.json`](prompts/registro_resultados.json).
+---
 
-## Requisitos Previos
+## 🏛️ Guía de Arquitectura
 
-- Python 3.10 o superior instalado.
-- Cuenta y API Key activa en Google AI Studio.
+El diseño del sistema sigue una estructura modular desacoplada:
 
-## Instalación y Configuración
+1. **Punto de Entrada (`main.py`)**: Orquesta la ejecución de la miniaplicación desde la raíz del proyecto.
+2. **Módulo de Consumo (`src/consumir_gemini.py`)**: Contiene las funciones nucleares de integración:
+   - `armar_peticion`: Construye la URL, headers y payload de acuerdo a la API.
+   - `enviar_peticion`: Gestiona la llamada HTTP con control de excepciones.
+   - `extraer_texto`: Parsea la respuesta JSON estructurada y extrae el contenido generado.
+3. **Decisión de Arquitectura y Selección de Modelo**: 
+   - Documento de decisión técnica: [`docs/decision-arquitectura.md`](docs/decision-arquitectura.md)
+   - Diagrama de arquitectura del flujo de datos: [`docs/diagrama_arquitectura.png`](docs/diagrama_arquitectura.png)
+4. **Banco de Prompts y Evaluación de Consistencia (`prompts/`)**:
+   - `banco.py`: Definición de prompts de sistema y usuario con salida estructurada JSON.
+   - `registro_resultados.json`: Registro empírico de las corridas de prueba.
 
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/hugorojasaguayo-1984/Proyecto-Reparalab.git(https://github.com/hugorojasaguayo-1984/Proyecto-Reparalab.git)
-   cd Proyecto-Reparalab
+---
+
+## 🚀 Instalación y Puesta en Marcha
+
+Para clonar y ejecutar este proyecto en un entorno limpio sin intervención manual, sigue estos pasos:
+
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/hugorojasaguayo-1984/Proyecto-Reparalab.git](https://github.com/hugorojasaguayo-1984/Proyecto-Reparalab.git)
+cd Proyecto-Reparalab
