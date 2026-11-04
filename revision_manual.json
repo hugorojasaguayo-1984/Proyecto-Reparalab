@@ -1,0 +1,92 @@
+[
+  {
+    "id": 2,
+    "pregunta": "¿Cuál es la capital de Argentina?",
+    "f1_score": 1.0,
+    "exactitud_factica": true,
+    "completitud": "Completa",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 alto por alta coincidencia léxica con la referencia concisa."
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Cuál es la capital de Perú?",
+    "f1_score": 1.0,
+    "exactitud_factica": true,
+    "completitud": "Completa",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 alto por alta coincidencia léxica con la referencia concisa."
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Cuál es el planeta más cercano al Sol?",
+    "f1_score": 1.0,
+    "exactitud_factica": true,
+    "completitud": "Completa",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 alto por alta coincidencia léxica con la referencia concisa."
+  },
+  {
+    "id": 1,
+    "pregunta": "¿Cuál es la capital de Chile?",
+    "f1_score": 0.7059,
+    "exactitud_factica": true,
+    "completitud": "Completa",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 moderado con respuesta correcta pero redactada con vocabulario alternativo."
+  },
+  {
+    "id": 12,
+    "pregunta": "¿En qué país se encuentran las pirámides de Giza?",
+    "f1_score": 0.6667,
+    "exactitud_factica": true,
+    "completitud": "Completa",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 moderado con respuesta correcta pero redactada con vocabulario alternativo."
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Cuál es el metal más liviano de la tabla periódica?",
+    "f1_score": 0.1584,
+    "exactitud_factica": true,
+    "completitud": "Completa",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 bajo debido a extensión o uso de sinónimos/explicación amplia del modelo, a pesar de que el hecho central es correcto."
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Cuántos días tiene un año bisiesto?",
+    "f1_score": 0.0952,
+    "exactitud_factica": true,
+    "completitud": "Parcial",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 bajo debido a extensión o uso de sinónimos/explicación amplia del modelo, a pesar de que el hecho central es correcto."
+  },
+  {
+    "id": 16,
+    "pregunta": "¿Cuál es la moneda oficial de Japón?",
+    "f1_score": 0.0952,
+    "exactitud_factica": true,
+    "completitud": "Parcial",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 bajo debido a extensión o uso de sinónimos/explicación amplia del modelo, a pesar de que el hecho central es correcto."
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Qué gas respiramos principalmente para sobrevivir?",
+    "f1_score": 0.0,
+    "exactitud_factica": true,
+    "completitud": "Parcial",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 bajo debido a extensión o uso de sinónimos/explicación amplia del modelo, a pesar de que el hecho central es correcto."
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Quién pintó la Mona Lisa?",
+    "f1_score": 0.0,
+    "exactitud_factica": true,
+    "completitud": "Parcial",
+    "contradiccion": false,
+    "observacion_cualitativa": "F1 bajo debido a extensión o uso de sinónimos/explicación amplia del modelo, a pesar de que el hecho central es correcto."
+  }
+]
