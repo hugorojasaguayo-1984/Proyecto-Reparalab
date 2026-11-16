@@ -13,22 +13,19 @@ corpus = [
     "Las pruebas unitarias del cliente usan mocks, de forma que la suite completa corre en menos de un segundo.",
 ]
 
+metadatas = [{"fuente": f"doc{i}.md"} for i in range(len(corpus))]
+ids = [f"doc{i}" for i in range(len(corpus))]
+
 splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=30)
-chunks = splitter.create_documents(corpus)
+chunks = splitter.create_documents(corpus, metadatas=metadatas)
 
 embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 vectorstore = Chroma.from_documents(
     documents=chunks,
     embedding=embeddings,
+    ids=ids,
     persist_directory="vectorstore/",
 )
 
-print(f"Indexados {len(chunks)} chunks en vectorstore/")
-
-# Confirmación de persistencia (Bloque 24-3 pág. 6)
-vectorstore_recargado = Chroma(
-    persist_directory="vectorstore/",
-    embedding_function=embeddings,
-)
-print("Chunks recuperados al recargar:", vectorstore_recargado._collection.count())
+print(f"Reindexados {len(chunks)} chunks en vectorstore/, ahora con metadata e ids")
