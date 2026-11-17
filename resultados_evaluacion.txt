@@ -1,0 +1,15 @@
+Fecha: 2026-11-17
+Configuracion: k=3, chunk_size=200, chunk_overlap=30
+
+0.33  1.00  que hace el cliente si una llamada tarda demasiado
+0.33  1.00  cuantos reintentos hace el cliente ante un TimeoutError
+0.33  1.00  que pasa si la clave de api es invalida
+0.33  1.00  los errores de autenticacion se reintentan
+0.33  1.00  como se calcula el costo de una llamada
+0.33  1.00  que campo de tokens se usa para calcular la tarifa
+0.33  1.00  como decide el agente que herramienta usar
+0.33  1.00  en que se basa el agente de la Unidad 2.4 para elegir herramienta
+0.33  1.00  como funcionan las pruebas unitarias del cliente
+0.33  1.00  cuanto tarda en correr la suite de pruebas con mocks
+
+promedio -> precision: 0.333  recall: 1.000
