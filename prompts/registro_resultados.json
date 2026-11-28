@@ -1,14 +1,14 @@
 {
   "clasificar_sentimiento": {
-    "exitos": 0,
+    "exitos": 3,
     "intentos": 3
   },
   "extraer_entidades": {
-    "exitos": 0,
+    "exitos": 3,
     "intentos": 3
   },
   "resumen_corto": {
-    "exitos": 0,
+    "exitos": 3,
     "intentos": 3
   }
 }
